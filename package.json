@@ -16,6 +16,7 @@
     "packageManager": "pnpm@10.16.1",
     "dependencies": {
         "cors": "^2.8.5",
-        "express": "^5.1.0"
+        "express": "^5.1.0",
+        "http-status": "^2.1.0"
     }
 }
