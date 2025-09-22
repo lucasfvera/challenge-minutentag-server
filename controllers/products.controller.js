@@ -27,6 +27,7 @@ const getProductPriceStockBySku = async (req, res) => {
             message: 'Invalid product SKU.',
             detail: 'The provided SKU is not a valid number. You should provide a 5 digit number.',
         });
+        return;
     }
 
     const productPriceStock = await productsService.queryProductPriceStockBySku(
@@ -39,6 +40,7 @@ const getProductPriceStockBySku = async (req, res) => {
             message: 'Product price-stock not found.',
             detail: "The product's price-stock for that SKU doesn't exist.",
         });
+        return;
     }
 
     res.send({ status: httpStatus.OK, data: productPriceStock });
